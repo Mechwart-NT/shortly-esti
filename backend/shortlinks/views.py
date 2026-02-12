@@ -17,7 +17,6 @@ def short_urls(request):
             return Response(serializer.data, status=201)
     return Response({"message":"Something went wrong..."})
 
-
 def short_url_redirect(request, id):
     try:
         link = ShortLink.objects.get(id=id)
