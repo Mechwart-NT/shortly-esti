@@ -27,8 +27,10 @@ const App = () => {
       <button type="submit">ADD</button>
     </form>
 
-    {links.map(link => <p key={link.id}>{link.originalURL}</p>)}
-    
+    {links.map(link => <a key={link.id} href={link.originalURL}>
+      Link {link.id}
+    </a>)}
+  
     </div>
   )
 }
