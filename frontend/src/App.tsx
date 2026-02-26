@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { addNewLink, getLinks, type ShortenedLink } from "./services/linkService"
+import Login from "./components/Login"
 
 const App = () => {
   const [links, setLinks] = useState<ShortenedLink[]>([])
@@ -17,6 +18,8 @@ const App = () => {
 
   return (
     <div>
+      <Login/>
+
     {newUrl}
     <form onSubmit={sendFormData}>
       <input
